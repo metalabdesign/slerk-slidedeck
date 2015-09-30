@@ -54,7 +54,7 @@ module.exports = {
         height: "10px",
         borderTopLeftRadius: "10px",
         borderTopRightRadius: "10px",
-        background: colors.tertiary
+        background: colors.primary
       },
       pacmanBottom: {
         position: "absolute",
@@ -63,7 +63,7 @@ module.exports = {
         height: "10px",
         borderBottomLeftRadius: "10px",
         borderBottomRightRadius: "10px",
-        background: colors.tertiary,
+        background: colors.primary,
         top: "10px"
       },
       point: {
@@ -74,7 +74,7 @@ module.exports = {
         height: "10px",
         borderWidth: 2,
         borderStyle: "solid",
-        borderColor: colors.tertiary,
+        borderColor: colors.primary,
         borderRadius: "50%",
         transition: "all 0.01s ease-out 0.4s"
       }
@@ -91,7 +91,7 @@ module.exports = {
       },
       bar: {
         height: "100%",
-        background: colors.tertiary,
+        background: colors.primary,
         transition: "all 0.3s ease-out"
       }
     },
@@ -101,7 +101,7 @@ module.exports = {
         bottom: 10,
         right: 10,
         zIndex: 1000,
-        color: colors.tertiary
+        color: colors.primary
       }
     }
   },
