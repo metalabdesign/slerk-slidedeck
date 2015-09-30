@@ -1,0 +1,9 @@
+class Hello extends React.Component {
+  render() {
+    return <div>Hello {this.props.name}</div>;
+    // Desugars to
+    // return React.createElement("div", null, "Hello ", this.props.name);
+  }
+}
+
+React.render(<Hello name="Jason"/>, $el);

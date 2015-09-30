@@ -1,0 +1,15 @@
+class ManyGreetings extends React.Component {
+  render() {
+    return (
+      <div>
+        {
+          this.props.names.map((name) => {
+            return <Hello name={name}/>
+          });
+        }
+      </div>
+    );
+  }
+}
+React.render(<ManyGreetings names={["Slerk", "Jason", ...]}/>, $el);
+

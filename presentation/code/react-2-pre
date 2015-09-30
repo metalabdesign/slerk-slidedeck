@@ -1,0 +1,12 @@
+class Greeting extends React.Component {
+  render() {
+    return (
+      <div>
+        <Hello name={this.props.names[0]}/>
+        <Hello name={this.props.names[1]}/>
+      </div>
+    );
+  }
+}
+React.render(<Greeting names={["Slerk", "Jason"]}/>, $el);
+
