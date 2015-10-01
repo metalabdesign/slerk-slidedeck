@@ -211,7 +211,7 @@ module.exports = {
     },
     image: {
       display: "block",
-      margin: "0.5em auto"
+      margin: "4em auto",
     },
     link: {
       textDecoration: "none"
