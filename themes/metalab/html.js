@@ -14,6 +14,8 @@ module.exports = function (data) {
       "<body>",
       "<div id=\"root\"></div>",
       "<script src=\"" + data.main + "\"></script>",
+      "<script src=\"https://use.typekit.net/egz2okm.js\"></script>",
+      "<script>try{Typekit.load({ async: true });}catch(e){}</script>",
       "</body>",
       "</html>"
     ].join("")
