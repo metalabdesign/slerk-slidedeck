@@ -1,9 +1,9 @@
 /*eslint-disable object-shorthand*/
 const colors = {
-  primary: "#f9c300",
-  secondary: "black",
+  primary: "#5abd4f",
+  secondary: "#787f8c",
   tertiary: "white",
-  headings: "#666",
+  headings: "#5c5c5c",
 };
 
 const fonts = {
@@ -35,7 +35,7 @@ module.exports = {
     pacman: {
       container: {
         position: "absolute",
-        bottom: "5px",
+        bottom: "30px",
         left: "50%",
         transition: "all 1s ease-in-out 0.2s",
         zIndex: 1000
@@ -141,8 +141,11 @@ module.exports = {
         maxWidth: 800
       },
       code: {
+        margin: "50",
         textAlign: "left",
-        padding: 20,
+        padding: 40,
+        backgroundColor: "#282828",
+        borderRadius: 5,
         fontWeight: "normal"
       }
     },
@@ -225,10 +228,10 @@ module.exports = {
       strikethrough: {}
     },
     text: {
-      color: "black",
+      color: colors.secondary,
       fontSize: "2.66em",
       fontFamily: fonts.primary,
-      margin: "0.25em auto"
+      margin: "0.5em auto"
     }
   }
 };
