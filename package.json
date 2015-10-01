@@ -7,7 +7,7 @@
     "start": "webpack-dev-server",
     "lint": "eslint --ext .js,.jsx .",
     "build": "webpack",
-    "deploy": "npm run build && surge -p ./dist"
+    "deploy": "npm run build && surge --domain slerk-slides.surge.sh -p ./dist"
   },
   "author": "",
   "license": "ISC",
