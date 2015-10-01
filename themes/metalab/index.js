@@ -7,7 +7,7 @@ const colors = {
 };
 
 const fonts = {
-  primary: "Helvetica Neue",
+  primary: "proxima-nova",
   secondary: "sans-serif",
   tertiary: "monospace"
 };
