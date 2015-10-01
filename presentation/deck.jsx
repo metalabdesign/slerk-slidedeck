@@ -26,7 +26,7 @@ export default class extends React.Component {
           <Heading size={1} fit>
             An exploration of cutting-edge web technologies
           </Heading>
-          <Link href="https://metalab.co"><Image src={images.metalab}/></Link>
+          <Link href="https://metalab.co"><Image height="90px" width="90px" src={images.metalab}/></Link>
         </Slide>
         <Slide>
           <Heading>Lorem ipsum</Heading>
