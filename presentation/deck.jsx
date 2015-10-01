@@ -9,13 +9,11 @@ import {
 
 // import Interactive from "./interactive";
 
-// const images = {
-//   city: require("./city.jpg"),
-//   kat: require("./kat.png"),
-//   logo: require("./formidable-logo.svg")
-// };
+const images = {
+  metalab: require("./metalab.png"),
+};
 
-// preloader([images.city, images.kat]);
+// preloader([images.metalab]);
 
 export default class extends React.Component {
   render() {
@@ -28,7 +26,7 @@ export default class extends React.Component {
           <Heading size={1} fit>
             An exploration of cutting-edge web technologies
           </Heading>
-          <Text>By MetaLab</Text>
+          <Link href="https://metalab.co"><Image src={images.metalab}/></Link>
         </Slide>
         <Slide>
           <Heading>Lorem ipsum</Heading>
