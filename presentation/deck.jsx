@@ -6,7 +6,7 @@ import {
 } from "../src/spectacle";
 
 // import preloader from "../src/utils/preloader";
-
+import styles from '../themes/metalab/index';
 // import Interactive from "./interactive";
 
 const images = {
@@ -31,20 +31,22 @@ export default class extends React.Component {
     return (
       <Deck transition={["slide"]} transitionDuration={500}>
         <Slide>
-          <Heading size={1} fit lineHeight={1.2}>
+          <Heading size={3} fit>
             Zero to Slack in 30 minutes
           </Heading>
-          <Heading size={1} fit>
-            An exploration of modern web development
-          </Heading>
-          <Link href="https://metalab.co"><Image height="90px" width="90px" src={images.metalab}/></Link>
+          <Text>An exploration of modern web development</Text>
+          <Link href="https://metalab.co"><Image style={styles.MLlogo}  height="80px" width="80px" src={images.metalab}/></Link>
         </Slide>
-
-        {sectionTitleSlide('Hi there', "We're Izaak, James, and Jason from MetaLab")}
-
-        {sectionTitleSlide('Modern Web Development', "This ain't Wordpress and jQuery")}
         <Slide>
-          <Heading size={4}>Slerk™</Heading>
+          <Heading size={3}>Hi there</Heading>
+          <Text>We're Izaak, James, and Jason from MetaLab</Text>
+        </Slide>
+        <Slide>
+          <Heading size={1} fit>Modern Web Development</Heading>
+          <Text>This ain't Wordpress and jQuery</Text>
+        </Slide>
+        <Slide>
+          <Heading size={3}>Slerk™</Heading>
           <Text>We'll be finishing a real-time FE app</Text>
           <Text>Some of the techs we'll use:</Text>
           <Text><Appear fid="1">Elixir, Phoenix, React, Redux, git, npm, Webpack

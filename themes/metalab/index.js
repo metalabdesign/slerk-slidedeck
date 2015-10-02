@@ -15,6 +15,14 @@ const fonts = {
 module.exports = {
   colors: colors,
   fonts: fonts,
+  MLlogo: {
+   position: 'absolute',
+   margin: 'auto',
+   display: 'inline-block',
+   left: '0',
+   right: '0',
+   top: '-80px'
+  },
   global: {
     body: {
       background: colors.tertiary,
@@ -182,7 +190,7 @@ module.exports = {
         fontFamily: fonts.secondary,
         lineHeight: 1,
         fontWeight: "bold",
-        margin: "0.5em auto"
+        margin: "0"
       },
       h4: {
         color: colors.headings,
@@ -190,7 +198,7 @@ module.exports = {
         fontFamily: fonts.primary,
         lineHeight: 1,
         fontWeight: "bold",
-        margin: "0.5em auto"
+        margin: "0"
       },
       h5: {
         color: colors.headings,
@@ -198,7 +206,7 @@ module.exports = {
         fontFamily: fonts.primary,
         lineHeight: 1,
         fontWeight: "bold",
-        margin: "0.5em auto"
+        margin: "0"
       },
       h6: {
         color: colors.headings,
@@ -206,7 +214,7 @@ module.exports = {
         fontFamily: fonts.primary,
         lineHeight: 1,
         fontWeight: "bold",
-        margin: "0.5em auto"
+        margin: "0"
       }
     },
     image: {
@@ -231,7 +239,8 @@ module.exports = {
       color: colors.secondary,
       fontSize: "2.66em",
       fontFamily: fonts.primary,
-      margin: "0.5em auto"
+      margin: "0.5em auto 0",
+      lineHeight: "0.8"
     }
   }
 };
