@@ -14,6 +14,17 @@ const images = {
 };
 
 // preloader([images.metalab]);
+//
+
+// Title/subtitle
+function sectionTitleSlide(title, subtitle) {
+  return (
+    <Slide>
+      <Heading size={3}>{title}</Heading>
+      <Heading size={5}>{subtitle}</Heading>
+    </Slide>
+  );
+}
 
 export default class extends React.Component {
   render() {
@@ -24,34 +35,31 @@ export default class extends React.Component {
             Zero to Slack in 30 minutes
           </Heading>
           <Heading size={1} fit>
-            An exploration of cutting-edge web technologies
+            An exploration of modern web development
           </Heading>
           <Link href="https://metalab.co"><Image height="90px" width="90px" src={images.metalab}/></Link>
         </Slide>
+
+        {sectionTitleSlide('Hi there', "We're Izaak, James, and Jason from MetaLab")}
+
+        {sectionTitleSlide('Modern Web Development', "This ain't Wordpress and jQuery")}
         <Slide>
-          <Heading>Lorem ipsum</Heading>
-          <CodePane
-            lang="javascript"
-            source={require("raw!./example-code-block")}
-          />
+          <Heading size={4}>Slerk™</Heading>
+          <Text>We'll be finishing a real-time FE app</Text>
+          <Text>Some of the techs we'll use:</Text>
+          <Text><Appear fid="1">Elixir, Phoenix, React, Redux, git, npm, Webpack
+              (with Hot Module Reloading), Babel, ES6/2015, LoDash, PostCSS,
+              CSS Modules, and a regular old terminal. (phew!)
+          </Appear></Text>
         </Slide>
+
         <Slide>
-          <Heading size={2}>Subtitle here</Heading>
-          <Heading size={5}>Subitlte tag here</Heading>
-        </Slide>
-        <Slide>
-          <Heading size={2}>Slide title</Heading>
-          <Text>Blah blah aosent oaiersnt oiaerns t</Text>
-        </Slide>
-        <Slide transition={["fade"]} bgColor="tertiary" textColor="secondary">
-          <List>
-            <ListItem><Appear fid="1">Inline style based theme system</Appear></ListItem>
-            <ListItem><Appear fid="2">Autofit text</Appear></ListItem>
-            <ListItem><Appear fid="3">Flexbox layout system</Appear></ListItem>
-            <ListItem><Appear fid="4">React-Router navigation</Appear></ListItem>
-            <ListItem><Appear fid="5">PDF export</Appear></ListItem>
-            <ListItem><Appear fid="6">And...</Appear></ListItem>
-          </List>
+          <Heading size={4}>But first, do this</Heading>
+          <CodePane lang="bash" source='
+              > git clone https://github.com/metalabdesign/slerk-web.git
+              > cd slerk-web
+              > npm install
+              '/>
         </Slide>
       </Deck>
     );
