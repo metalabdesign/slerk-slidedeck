@@ -5,6 +5,10 @@ import {
   Heading, Image, Layout, Link, ListItem, List, Quote, Slide, Text
 } from "../src/spectacle";
 
+import styles from '../themes/metalab/index';
+
+console.log(styles);
+
 // import preloader from "../src/utils/preloader";
 
 // import Interactive from "./interactive";
@@ -20,7 +24,7 @@ export default class extends React.Component {
     return (
       <Deck transition={["slide"]} transitionDuration={500}>
         <Slide>
-          <Heading size={1} fit lineHeight={1.2}>
+          <Heading style={styles.custom} size={1} fit lineHeight={1.2}>
             Zero to Slack in 30 minutes
           </Heading>
           <Heading size={1} fit>
