@@ -15,6 +15,9 @@ const fonts = {
 module.exports = {
   colors: colors,
   fonts: fonts,
+  custom: {
+    color: 'red',
+  },
   global: {
     body: {
       background: colors.tertiary,
