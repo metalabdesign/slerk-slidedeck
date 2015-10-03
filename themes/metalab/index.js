@@ -4,6 +4,7 @@ const colors = {
   secondary: "#787f8c",
   tertiary: "white",
   headings: "#5c5c5c",
+  pacman: "#bbbbbb",
 };
 
 const fonts = {
@@ -66,7 +67,7 @@ module.exports = {
         height: "10px",
         borderTopLeftRadius: "10px",
         borderTopRightRadius: "10px",
-        background: colors.primary
+        background: colors.pacman
       },
       pacmanBottom: {
         position: "absolute",
@@ -75,7 +76,7 @@ module.exports = {
         height: "10px",
         borderBottomLeftRadius: "10px",
         borderBottomRightRadius: "10px",
-        background: colors.primary,
+        background: colors.pacman,
         top: "10px"
       },
       point: {
@@ -86,7 +87,7 @@ module.exports = {
         height: "10px",
         borderWidth: 2,
         borderStyle: "solid",
-        borderColor: colors.primary,
+        borderColor: colors.pacman,
         borderRadius: "50%",
         transition: "all 0.01s ease-out 0.4s"
       }
@@ -226,7 +227,8 @@ module.exports = {
       margin: "4em auto",
     },
     link: {
-      textDecoration: "none"
+      textDecoration: "none",
+      color: "#366AB9",
     },
     listItem: {
       fontSize: "2.66em"
