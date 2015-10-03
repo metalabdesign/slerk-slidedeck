@@ -1,6 +1,0 @@
-// If prod, noop the devtools middleware (identity fn is noop of composition)
-const store = compose(
-  applyMiddleware(promiseMiddleware),
-  useDevtools ? devTools() : identity,
-  useDevtools ? persistStateMiddleware() : identity,
-)(createStore)(reducer);
