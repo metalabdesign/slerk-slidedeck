@@ -1,0 +1,14 @@
+// Fat arrow anonymous functions
+const fn = (a) => {
+  return 'fat arrows!';
+}
+
+// Promises (using xr, thin wrapper around XHR)
+const call = xr.get('/api/data.json');
+
+call.then((response) => {
+  // Fires after the XHR call returns
+}).catch((err) => {
+  // Handles errors
+});
+

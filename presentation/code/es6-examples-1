@@ -1,0 +1,11 @@
+// Modules
+import React from 'react';
+
+// const + let
+const iWontBeReassigned = 'nope, never';
+let iCanBeReassigned = 'yup, anytime';
+iCanBeReassigned = 'see?';
+
+// Destructuring assignment
+const obj = { a: 'a', b: 'b'};
+const { a, b } = obj; // a -> 'a', b -> 'b'

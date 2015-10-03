@@ -5,22 +5,24 @@ import {
   Heading, Image, Layout, Link, ListItem, List, Quote, Slide, Text
 } from "../src/spectacle";
 
-// import preloader from "../src/utils/preloader";
+import preloader from "../src/utils/preloader";
 import styles from '../themes/metalab/index';
 // import Interactive from "./interactive";
 
 const images = {
-  metalab: require("./metalab.png"),
+  metalab: require("./images/metalab.png"),
+  slerkScreenshot: require("./images/slerk-screenshot.png"),
+  reactSlide: require("./images/react-slide.jpg"),
+  smartVDumbComponents: require("./images/smart-v-dumb-components.png"),
 };
 
-// preloader([images.metalab]);
-//
+preloader([images.slerkScreenshot, images.reactSlide, images.smartVDumbComponents]);
 
 // Title/subtitle
 function sectionTitleSlide(title, subtitle) {
   return (
     <Slide>
-      <Heading size={3}>{title}</Heading>
+      <Heading size={4}>{title}</Heading>
       <Heading size={5}>{subtitle}</Heading>
     </Slide>
   );
@@ -29,40 +31,154 @@ function sectionTitleSlide(title, subtitle) {
 export default class extends React.Component {
   render() {
     return (
-      <Deck transition={["slide"]} transitionDuration={500}>
+      <Deck transition={["slide"]} transitionDuration={200}>
+
         <Slide>
-          <Heading size={3} fit>
+          <Heading size={4} fit>
             Zero to Slack in 30 minutes
           </Heading>
           <Text>An exploration of modern web development</Text>
-          <Link href="https://metalab.co"><Image style={styles.MLlogo}  height="80px" width="80px" src={images.metalab}/></Link>
-        </Slide>
-        <Slide>
-          <Heading size={3}>Hi there</Heading>
-          <Text>We're Izaak, James, and Jason from MetaLab</Text>
-        </Slide>
-        <Slide>
-          <Heading size={1} fit>Modern Web Development</Heading>
-          <Text>This ain't Wordpress and jQuery</Text>
-        </Slide>
-        <Slide>
-          <Heading size={3}>Slerk™</Heading>
-          <Text>We'll be finishing a real-time FE app</Text>
-          <Text>Some of the techs we'll use:</Text>
-          <Text><Appear fid="1">Elixir, Phoenix, React, Redux, git, npm, Webpack
-              (with Hot Module Reloading), Babel, ES6/2015, LoDash, PostCSS,
-              CSS Modules, and a regular old terminal. (phew!)
-          </Appear></Text>
         </Slide>
 
         <Slide>
-          <Heading size={4}>But first, do this</Heading>
-          <CodePane lang="bash" source='
-              > git clone https://github.com/metalabdesign/slerk-web.git
-              > cd slerk-web
-              > npm install
-              '/>
+          <Heading size={4}>Hi there</Heading>
+          <Text>We're Izaak, James, and Jason from MetaLab</Text>
+          <Link href="https://metalab.co"><Image style={styles.MLlogo}  height="200px" width="200px" src={images.metalab}/></Link>
         </Slide>
+
+        <Slide>
+          <Heading size={4}>Let's build Slerk™</Heading>
+          <Text>A real time multiuser chat application</Text>
+          <Image src={images.slerkScreenshot.replace("/", "")} style={styles.slerkScreenshot}/>
+        </Slide>
+
+        <Slide>
+          <Heading size={4}>Setup</Heading>
+          <Text>Go to repo, follow instructions</Text>
+          <Text>
+            <Link href="https://github.com/metalabdesign/startupslam-workshop#setup">
+              https://github.com/metalabdesign/startupslam-workshop#setup
+            </Link>
+          </Text>
+        </Slide>
+
+        <Slide>
+          <Heading size={4}>Main technologies</Heading>
+          <List>
+            <ListItem>
+              <Link href="http://elixir-lang.org/">Elixir</Link>
+              {" & "}
+              <Link href="http://www.phoenixframework.org/">Phoenix</Link>
+            </ListItem>
+            <ListItem>
+              <Link href="https://babeljs.io/">Babel</Link>
+              {' '}
+              (<Link href="http://es6-features.org/">ES6/2015</Link>)
+            </ListItem>
+            <ListItem>
+              <Link href="https://webpack.github.io/">Webpack</Link> (HMR, CSS Modules)
+            </ListItem>
+            <ListItem>
+              <Link href="https://github.com/rackt/redux">Redux</Link> (&amp; devtools)
+            </ListItem>
+            <ListItem>
+              <Link href="https://facebook.github.io/react/">React</Link>
+            </ListItem>
+          </List>
+        </Slide>
+
+        <Slide>
+          <Heading size={4}>Elixir &amp; Phoenix</Heading>
+          <List>
+            <ListItem>Elixir: targets Erlang VM, looks like Ruby</ListItem>
+            <ListItem>Concurrent, immutable, functional</ListItem>
+            <ListItem>Phoenix: web framework for Elixir (Rails-ish)</ListItem>
+            <ListItem>Built-in websocket channels (good for Slerk)</ListItem>
+          </List>
+        </Slide>
+
+        <Slide>
+          <Heading size={4}>Babel, ES6/2015</Heading>
+          <Text>Tomorrow's JavaScript today!</Text>
+          <CodePane lang="bash" source={require("raw!./code/es6-examples-1")}/>
+        </Slide>
+
+        <Slide>
+          <Heading size={4}>Babel, ES6/2015 (2)</Heading>
+          <CodePane lang="bash" source={require("raw!./code/es6-examples-2")}/>
+        </Slide>
+
+        <Slide>
+          <Heading size={4}>Webpack</Heading>
+          <List>
+            <ListItem>Asset build + compilation system</ListItem>
+            <ListItem>Source files, runs transforms, builds assets</ListItem>
+            <ListItem>Huge list of plugins/transforms/etc</ListItem>
+            <ListItem>React HMR - hot patches JS without reloads</ListItem>
+          </List>
+        </Slide>
+
+        <Slide>
+          <Heading size={4}>Redux</Heading>
+          <List>
+            <ListItem>"Predictable state mangement for JS apps"</ListItem>
+            <ListItem>Actions → reducers → store</ListItem>
+            <ListItem>React components render based on store</ListItem>
+            <ListItem>Only 99 lines without guards/checks</ListItem>
+            <ListItem>Rich debugging tools</ListItem>
+          </List>
+        </Slide>
+
+        <Slide>
+          <Heading size={4}>Last, but not least...</Heading>
+        </Slide>
+
+        <Slide bgImage={images.reactSlide.replace("/", "")}></Slide>
+
+        <Slide>
+          <Heading size={4}>React is...</Heading>
+          <List>
+            <ListItem>Declarative view library for UIs</ListItem>
+            <ListItem>Used as the V in MV*</ListItem>
+            <ListItem>Made by Facebook, in production many places</ListItem>
+            <ListItem>tite</ListItem>
+          </List>
+        </Slide>
+
+        <Slide>
+          <Heading size={4}>Why React?</Heading>
+          <List>
+            <ListItem>Encapsulates data, markup, and behaviour</ListItem>
+            <ListItem>Declarative view structure</ListItem>
+            <ListItem>Efficient rendering</ListItem>
+            <ListItem>Plays well with immutable data structures</ListItem>
+            <ListItem>Server-side rendering (isomorphic applications)</ListItem>
+            <ListItem>React Native for iOS, Android</ListItem>
+          </List>
+        </Slide>
+
+        <Slide>
+          <Heading size={4}>React Components</Heading>
+          <List>
+            <ListItem>Components ecapsulate data and behaviour, and produce markup</ListItem>
+            <ListItem>Data: properties and state</ListItem>
+            <ListItem>Referentially transparent</ListItem>
+            <ListItem>Whenever props or state change, component(s) re-render</ListItem>
+            <ListItem>Efficient renders due to virtual DOM + diffing</ListItem>
+            <ListItem>Nestable, composable</ListItem>
+          </List>
+        </Slide>
+
+        <Slide>
+          <Heading size={4}>Smart/Dumb Components</Heading>
+          <Text>Most components should be dumb, only props</Text>
+          <Image margin="30px auto 40px" width="50vw" src={images.smartVDumbComponents.replace("/", "")}/>
+        </Slide>
+
+        <Slide>
+          <Heading size={4}>Let's code!</Heading>
+        </Slide>
+
       </Deck>
     );
   }

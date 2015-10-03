@@ -15,14 +15,18 @@ const fonts = {
 module.exports = {
   colors: colors,
   fonts: fonts,
+  
   MLlogo: {
-   position: 'absolute',
-   margin: 'auto',
-   display: 'inline-block',
+   margin: '40px auto 0',
+   display: 'block',
    left: '0',
    right: '0',
-   top: '-80px'
   },
+
+  slerkScreenshot: {
+    height: '40vh',
+  },
+
   global: {
     body: {
       background: colors.tertiary,
@@ -170,7 +174,7 @@ module.exports = {
       h1: {
         color: colors.headings,
         fontSize: "7.05em",
-        fontFamily: fonts.primary,
+        fontFamily: fonts.secondary,
         lineHeight: 1,
         fontWeight: "bold",
         margin: 0,
@@ -179,7 +183,7 @@ module.exports = {
       h2: {
         color: colors.headings,
         fontSize: "5.88em",
-        fontFamily: fonts.primary,
+        fontFamily: fonts.secondary,
         lineHeight: 1,
         fontWeight: "bold",
         margin: 0
@@ -195,7 +199,7 @@ module.exports = {
       h4: {
         color: colors.headings,
         fontSize: "3.82em",
-        fontFamily: fonts.primary,
+        fontFamily: fonts.secondary,
         lineHeight: 1,
         fontWeight: "bold",
         margin: "0"
@@ -203,7 +207,7 @@ module.exports = {
       h5: {
         color: colors.headings,
         fontSize: "3.19em",
-        fontFamily: fonts.primary,
+        fontFamily: fonts.secondary,
         lineHeight: 1,
         fontWeight: "bold",
         margin: "0"
@@ -211,7 +215,7 @@ module.exports = {
       h6: {
         color: colors.headings,
         fontSize: "2.66em",
-        fontFamily: fonts.primary,
+        fontFamily: fonts.secondary,
         lineHeight: 1,
         fontWeight: "bold",
         margin: "0"
@@ -240,7 +244,7 @@ module.exports = {
       fontSize: "2.66em",
       fontFamily: fonts.primary,
       margin: "0.5em auto 0",
-      lineHeight: "0.8"
+      lineHeight: "1"
     }
   }
 };

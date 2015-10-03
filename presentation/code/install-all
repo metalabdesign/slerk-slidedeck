@@ -1,0 +1,3 @@
+> git clone https://github.com/metalabdesign/slerk-web.git
+> cd slerk-web
+> npm install
