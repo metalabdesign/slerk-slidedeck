@@ -16,7 +16,7 @@ const fonts = {
 module.exports = {
   colors: colors,
   fonts: fonts,
-  
+
   MLlogo: {
    margin: '40px auto 0',
    display: 'block',

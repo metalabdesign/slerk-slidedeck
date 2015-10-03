@@ -53,16 +53,6 @@ export default class extends React.Component {
         </Slide>
 
         <Slide>
-          <Heading size={4}>Setup</Heading>
-          <Text>Go to repo, follow instructions</Text>
-          <Text>
-            <Link href="https://github.com/metalabdesign/startupslam-workshop">
-              https://github.com/metalabdesign/startupslam-workshop
-            </Link>
-          </Text>
-        </Slide>
-
-        <Slide>
           <Heading size={4}>Main technologies</Heading>
           <List>
             <ListItem>
@@ -100,12 +90,12 @@ export default class extends React.Component {
         <Slide>
           <Heading size={4}>Babel, ES6/2015</Heading>
           <Text>Tomorrow's JavaScript today!</Text>
-          <CodePane lang="bash" source={require("raw!./code/es6-examples-1")}/>
+          <CodePane lang="javascript" source={require("raw!./code/es6-examples-1")}/>
         </Slide>
 
         <Slide>
           <Heading size={4}>Babel, ES6/2015 (2)</Heading>
-          <CodePane lang="bash" source={require("raw!./code/es6-examples-2")}/>
+          <CodePane lang="javascript" source={require("raw!./code/es6-examples-2")}/>
         </Slide>
 
         <Slide>
@@ -139,34 +129,30 @@ export default class extends React.Component {
           <Heading size={4}>React is...</Heading>
           <List>
             <ListItem>Declarative view library for UIs</ListItem>
-            <ListItem>Used as the V in MV*</ListItem>
-            <ListItem>Made by Facebook, in production many places</ListItem>
-            <ListItem>tite</ListItem>
-          </List>
-        </Slide>
-
-        <Slide>
-          <Heading size={4}>Why React?</Heading>
-          <List>
-            <ListItem>Encapsulates data, markup, and behaviour</ListItem>
-            <ListItem>Declarative view structure</ListItem>
+            <ListItem>Encapsulates data, markup, behaviour</ListItem>
+            <ListItem>Easy to reason about</ListItem>
             <ListItem>Efficient rendering</ListItem>
-            <ListItem>Plays well with immutable data structures</ListItem>
-            <ListItem>Server-side rendering (isomorphic applications)</ListItem>
+            <ListItem>Made by Facebook, in prod many places</ListItem>
             <ListItem>React Native for iOS, Android</ListItem>
           </List>
         </Slide>
 
         <Slide>
           <Heading size={4}>React Components</Heading>
-          <List>
-            <ListItem>Components ecapsulate data and behaviour, and produce markup</ListItem>
-            <ListItem>Data: properties and state</ListItem>
-            <ListItem>Referentially transparent</ListItem>
-            <ListItem>Whenever props or state change, component(s) re-render</ListItem>
-            <ListItem>Efficient renders due to virtual DOM + diffing</ListItem>
-            <ListItem>Nestable, composable</ListItem>
-          </List>
+          <CodePane lang="javascript" source={require("raw!./code/react-pre")}/>
+          <CodePane lang="html" source={require("raw!./code/react-post")}/>
+        </Slide>
+
+        <Slide>
+          <Heading size={4}>React Components (2)</Heading>
+          <CodePane lang="javascript" source={require("raw!./code/react-2-pre")}/>
+          <CodePane lang="html" source={require("raw!./code/react-2-post")}/>
+        </Slide>
+
+        <Slide>
+          <Heading size={4}>React Components (3)</Heading>
+          <CodePane lang="javascript" source={require("raw!./code/react-3-pre")}/>
+          <CodePane lang="html" source={require("raw!./code/react-3-post")}/>
         </Slide>
 
         <Slide>
@@ -177,7 +163,14 @@ export default class extends React.Component {
 
         <Slide>
           <Heading size={4}>Let's code!</Heading>
+          <Text>Go to repo, follow instructions</Text>
+          <Text>
+            <Link href="https://github.com/metalabdesign/startupslam-workshop">
+              https://github.com/metalabdesign/startupslam-workshop
+            </Link>
+          </Text>
         </Slide>
+
 
       </Deck>
     );
