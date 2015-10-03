@@ -56,8 +56,8 @@ export default class extends React.Component {
           <Heading size={4}>Setup</Heading>
           <Text>Go to repo, follow instructions</Text>
           <Text>
-            <Link href="https://github.com/metalabdesign/startupslam-workshop#setup">
-              https://github.com/metalabdesign/startupslam-workshop#setup
+            <Link href="https://github.com/metalabdesign/startupslam-workshop">
+              https://github.com/metalabdesign/startupslam-workshop
             </Link>
           </Text>
         </Slide>
