@@ -38,6 +38,8 @@ export default class extends React.Component {
             Zero to Slack in 30 minutes
           </Heading>
           <Text>An exploration of modern web development</Text>
+          <Text><Link href="http://slerk-slides.surge.sh">slerk-slides.surge.sh</Link></Text>
+
         </Slide>
 
         <Slide>
