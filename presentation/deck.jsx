@@ -2,7 +2,7 @@ import React from "react/addons";
 
 import {
   Appear, BlockQuote, Cite, CodePane, Deck, Fill,
-  Heading, Image, Layout, Link, ListItem, List, Quote, Slide, Text
+  Heading, Image, Layout, Link, ListItem, List, Markdown, Quote, Slide, Text
 } from "../src/spectacle";
 
 import preloader from "../src/utils/preloader";
@@ -82,9 +82,22 @@ export default class extends React.Component {
         </Slide>
         <Slide transition={["slide"]} bgColor="black">
           <BlockQuote>
-            <Quote>Wonderfully formatted quotes</Quote>
-            <Cite>Ken Wheeler</Cite>
+            <Quote>Cat ipsum dolor sit amet, hunt anything that moves or hopped up on goofballs hide when guests come over. Hide when guests come over intrigued by the shower, or stare at ceiling climb leg for stretch and use lap as chair.</Quote>
           </BlockQuote>
+        </Slide>
+        <Slide>
+          <Markdown>
+            {`
+#### Markdown inline
+[Bacon ipsum](http://baconipsum.com) dolor amet jerky t-bone fatback, pork alcatra beef ribs bresaola swine pancetta rump shank kielbasa.
+* Lists!
+* ~~Prosciutto~~ shankle _sirloin_
+* Tenderloin **doner** short ribs
+            `}
+          </Markdown>
+        </Slide>
+        <Slide>
+          <Markdown source={require("raw!./markdown-example.md")}/>
         </Slide>
         <Slide transition={["slide", "spin"]} bgColor="primary">
           <Heading caps fit size={1} textColor="tertiary">
