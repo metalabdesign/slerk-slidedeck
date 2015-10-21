@@ -224,7 +224,7 @@ module.exports = {
     },
     image: {
       display: "block",
-      margin: "4em auto",
+      maxWidth: "100%",
     },
     link: {
       textDecoration: "none",

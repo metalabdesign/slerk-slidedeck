@@ -1,7 +1,8 @@
 import React from "react/addons";
+import values from "lodash/object/values";
 
 import {
-  Appear, BlockQuote, Cite  CodePane, Deck, Fill,
+  Appear, BlockQuote, Cite, CodePane, Deck, Fill,
   Heading, Image, Layout, Link, ListItem, List, Markdown, Quote, Slide, Text
 } from "../src/spectacle";
 
@@ -14,9 +15,11 @@ const images = {
   slerkScreenshot: require("./images/slerk-screenshot.png"),
   reactSlide: require("./images/react-slide.jpg"),
   smartVDumbComponents: require("./images/smart-v-dumb-components.png"),
+  reduxUnidir: require("./images/redux-unidir-ui-arch.jpg"),
+  fluxUnidir: require("./images/flux-unidir-ui-arch.jpg"),
 };
 
-preloader([images.slerkScreenshot, images.reactSlide, images.smartVDumbComponents]);
+preloader(values(images));
 
 // Title/subtitle
 function sectionTitleSlide(title, subtitle) {
@@ -171,6 +174,42 @@ export default class extends React.Component {
               https://github.com/metalabdesign/startupslam-workshop
             </Link>
           </Text>
+        </Slide>
+
+        <Slide>
+          <Markdown>
+            {`
+#### Redux
+Predictable state container for JavaScript apps
+            `}
+          </Markdown>
+        </Slide>
+
+        <Slide>
+          <Markdown>
+            {`
+#### Flux
+![Flux unidirectional flow](${images.fluxUnidir.replace("/", "")})
+            `}
+          </Markdown>
+        </Slide>
+
+        <Slide>
+          <Markdown>
+            {`
+#### Redux: reducers + flux
+![Redux unidirectional flow](${images.reduxUnidir.replace("/", "")})
+            `}
+          </Markdown>
+        </Slide>
+
+        <Slide>
+          <Markdown>
+            {`
+#### Redux in Slerk
+Let's look at some code
+            `}
+          </Markdown>
         </Slide>
 
 

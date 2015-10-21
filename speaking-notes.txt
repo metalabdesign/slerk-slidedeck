@@ -1,0 +1,41 @@
+Redux is Flux, so let's take a look at it first.
+This is an illustration by Andre Staltz, creator of Cycle.js - v. cool lib based on observables check it out
+Application state is kept inside of stores. For Slerk, that would be a list of users, messages, etc.
+Your view layer renders the contents of your stores, and can trigger actions.
+Actions describe some change that happens to the application state, whether local or an async call to an API
+A single dispatcher sends actions to the stores, which update based on the action
+The application state changes, which triggers a re-render in your view layer, and the cycle contiues
+
+Redux shares the same unidirectional flow as Flux, with the same idea of a view layer and actions.
+But we have a single app-level store with a dispatch method on it - no need for the single dispatcher
+When an action is dispatched, it flows through any number of reducers.
+Reducers are pure functions that take an action and the current application state, and return a new applicaton state.
+Middleware can also be applied to stores, which takes effect before any reducers are called
+
+Let's take a look at how Slerk uses Redux, starting with reducers.
+Open up /reducers/channels. This is the reducer for our channels and messaeges.
+We have reducers for other parts of Slerk, but we'll concentrate on channels.
+We have one channel hardcoded, with a sample message. This is the initial state for our channel store.
+Down at the bottom, we have the reducer function, which takes a copy of the state and an action.
+If the action has new messages, then we return a new copy of the state with them added.
+
+Next up are action creators.
+Open up src/actions, and take a look at messagesFetch.
+When this message gets dispatched, it will fetch messages from our API and pass the results to the channels reducer.
+We're using createAction, which is a function to reduce boilerplate.
+We're also using redux-promise, which is reducer middleware that wraps actions that return promises, automatically calling then()
+
+We wire all of this up in src/index.js
+First we create our store by composing our middleware (promises, and dev tools) and our reducers
+We're using promise middleware, and a couple of pieces of dev tool middleware
+Then we dispatch some startup actions, like fetching the user list, messages, and connecting to the websocket
+Then we render RootApp, wrapped using react-redux's provider, wired up to our store.
+This exposes our store to RootApp, which we'll look at next.
+
+Open up src/containers/app.
+This component exports our root component, wrapped in react-redux's connect function, which completes the link to our store
+We also have the opportunity to use select to determine which parts of the global state we're interested in.
+This allows us to restrict the state we pass to parts of our application.
+In the render method, we define a handler, boundMessageSend, and pass it to our Chat component
+When this function is invoked, it will dispatch a messageSend action which can be handled by our action creators and reducers
+
